@@ -5,7 +5,7 @@ from subprocess import call
 import requests
 import json
 
-SETTINGS_INI = "settings.ini"
+SETTINGS_INI = "check_seafile.ini"
 
 parent_dir = os.path.dirname(__file__)
 
