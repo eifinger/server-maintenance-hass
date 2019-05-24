@@ -24,7 +24,7 @@ hass_url = parser.get("hass", "hass_url")
 
 def setHassSensor(value, token, url):
     """Set the value of the Homeassistant Sensor"""
-    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+    headers = {"Authorization": "Bearer {}".format(token), "Content-Type": "application/json"}
     data = {"state": value}
     response = requests.post(url, data=json.dumps(data), headers=headers)
     print(response)
